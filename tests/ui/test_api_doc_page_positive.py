@@ -20,7 +20,7 @@ class TestApiDocPage(BaseUiTestClass):
         self.get_page(ApiDocsPage)
         self.assertions.is_equal(self.browser.title, "Time API")
 
-    def test_time_zone_try_text_try_it_now_is_present_success(self):
+    def test_time_zone_text_try_it_out_success(self):
         """Проверка наличия текста "Try it out."""
 
         api_doc_page = self.get_page(ApiDocsPage)
