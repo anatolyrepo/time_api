@@ -12,4 +12,10 @@ class ApiDocsPage(BasePage):
     path = '/swagger/index.html'
 
     time_get_zone = (By.CSS_SELECTOR, "#operations-Time-get_api_Time_current_zone .opblock-summary-method")
-    try_it_now_btn = (By.CSS_SELECTOR, ".try-out__btn.btn")
+    global_try_it_now_btn = (By.CSS_SELECTOR, ".try-out__btn.btn")
+
+    def go_to_full_info(self, locator):
+        self._click(*locator)
+
+    def get_web_element_text(self, locator):
+        return self._get_web_element_text(*locator)

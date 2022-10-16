@@ -38,3 +38,7 @@ class BasePage:
 
     def _execute_script(self, scrypt):
         self._driver.execute_script(scrypt)
+
+    def _get_web_element_text(self, by, locator):
+        self.wait.until(EC.visibility_of_element_located((by, locator)))
+        return self._find_element(by, locator).text
