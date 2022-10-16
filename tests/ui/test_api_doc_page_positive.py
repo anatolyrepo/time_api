@@ -1,5 +1,3 @@
-import time
-
 import pytest
 
 from configs.config import Config
@@ -27,5 +25,4 @@ class TestApiDocPage(BaseUiTestClass):
 
         api_doc_page = self.get_page(ApiDocsPage)
         api_doc_page.go_to_full_info(api_doc_page.time_get_zone)
-        assert_text = api_doc_page.get_web_element_text(api_doc_page.global_try_it_now_btn)
-        self.assertions.is_equal(assert_text, "Try it out")
+        api_doc_page.assert_web_element_text(api_doc_page.global_try_it_now_btn, "Try it out")

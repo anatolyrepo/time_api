@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 
 from pages.base_page import BasePage
+from assertions.assertions import Assertions
 
 
 class ApiDocsPage(BasePage):
@@ -17,5 +18,6 @@ class ApiDocsPage(BasePage):
     def go_to_full_info(self, locator):
         self._click(*locator)
 
-    def get_web_element_text(self, locator):
-        return self._get_web_element_text(*locator)
+    def assert_web_element_text(self, locator, text):
+        element_text = self._get_web_element_text(*locator)
+        Assertions.is_equal(element_text, text)
