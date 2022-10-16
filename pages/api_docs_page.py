@@ -18,6 +18,6 @@ class ApiDocsPage(BasePage):
     def click_to_endpoint_by_locator(self, locator):
         self._click(*locator)
 
-    def assert_web_element_text(self, locator, text):
+    def check_web_element_text(self, locator, text):
         element_text = self._get_web_element_text(*locator)
         Assertions.is_equal(element_text, text)

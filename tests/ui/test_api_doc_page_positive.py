@@ -25,4 +25,4 @@ class TestApiDocPage(BaseUiTestClass):
 
         api_doc_page = self.get_page(ApiDocsPage)
         api_doc_page.click_to_endpoint_by_locator(api_doc_page.time_get_zone)
-        api_doc_page.assert_web_element_text(api_doc_page.global_try_it_now_btn, "Try it out")
+        api_doc_page.check_web_element_text(api_doc_page.global_try_it_now_btn, "Try it out")
