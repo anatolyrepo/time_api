@@ -1,7 +1,9 @@
  .DS_Store
 .idea/
+.pytest_cache
+__pycache__
+
 allure_reports/
 
 /venv/
-.pytest_cache
-__pycache__
+

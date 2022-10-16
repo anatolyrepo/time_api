@@ -14,8 +14,14 @@ class TestMainPage(BaseUiTestClass):
         self.get_page(ApiDocsPage)
         self.assertions.is_equal(Config.base_url + ApiDocsPage.path, self.browser.current_url)
 
-    def test_____page_success(self):
+    def test_check_page_title_success(self):
         """Проверка получения страницы Api Docs."""
 
-        api_docs_page = self.get_page(ApiDocsPage)
-        self.assertions.is_equal(api_docs_page.title, "Api Doc")
+        self.get_page(ApiDocsPage)
+        self.assertions.is_equal(self.browser.title, "Time API")
+
+    def test_check_page_title_success(self):
+        """Проверка получения страницы Api Docs."""
+
+        self.get_page(ApiDocsPage)
+        self.assertions.is_equal(self.browser.title, "Time API")
